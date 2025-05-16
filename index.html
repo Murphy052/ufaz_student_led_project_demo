@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Azercell tətbiqinin veb-səhifəsinə daxil ol</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .left {
+      width: 30%;
+      background-image: url('uploaded_image.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .right {
+      width: 70%;
+      background-color: #221d2d;
+      position: relative;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      height: auto;
+    }
+
+    .login-container {
+      position: absolute;
+      top: 46%;
+      left: 11%;
+      width: 45%;
+      transform: translateY(-50%);
+      color: white;
+    }
+
+    .input-row {
+      display: flex;
+      margin-top: 30px;
+      gap: 5%;
+    }
+
+    .left-box, .right-box {
+      background-color: #2e253b;
+      border-radius: 10px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-box {
+      width: 20%;
+    }
+
+    .right-box {
+      width: 75%;
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+
+    .left-box img {
+      height: 30px;
+      width: auto;
+    }
+
+    .right-box input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    .right-box input::placeholder {
+      color: grey;
+    }
+
+    .button {
+      position: relative;
+      overflow: hidden;
+      height: 3rem;
+      padding: 0 2rem;
+      border-radius: 1.5rem;
+      background: #3d3a4e;
+      background-size: 400%;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button:hover::before {
+      transform: scaleX(1);
+    }
+
+    .button-content {
+      z-index: 1;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      width: 100%;
+      height: inherit;
+      border-radius: inherit;
+      background: linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+      );
+      transition: all 0.475s;
+    }
+
+    .bottom-image-wrapper {
+      position: absolute;
+      bottom: 20px;
+      left: 11%;
+      width: 45%;
+    }
+
+    .bottom-image-wrapper img {
+      width: 70%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <img src="lang.png" alt="Language Selector" class="language-selector">
+
+      <div class="login-container">
+        <h1>Azercell tətbiqinin veb-səhifəsinə daxil ol</h1>
+        <br>
+        <p>Nömrə haqqında məlumat almaq və əməliyyatları həyata keçirmək üçün Azercell tətbiqinin veb-səhifəsinə daxil ol</p>
+
+        <div class="input-row">
+          <div class="left-box">
+            <img src="number.png" alt="Country Code">
+          </div>
+          <div class="right-box">
+            <input type="text" placeholder="Telefon nömrəsi">
+          </div>
+        </div>
+        <br><br>
+        <div class="button">
+          <p class="button-content">Davam et</p>
+        </div>
+      </div>
+
+      <div class="bottom-image-wrapper">
+        <img src="un.png" alt="Bottom Image">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
